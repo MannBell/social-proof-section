@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  --main-padding: 1.5em;
+  --primary-very-dark-magenta: hsl(300, 43%, 22%);
+  --primary-soft-pink: hsl(333, 80%, 67%);
+  --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --neutral-light-grayish-magenta: hsl(300, 24%, 96%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --regular1: 400;
+  --regular2: 500;
+  --bold: 700;
+}
+
+body {
+  color: var(--neutral-light-grayish-magenta);
+  background:  url("./images/bg-pattern-top-mobile.svg")
+  , url("./images/bg-pattern-bottom-mobile.svg")
+  ,var(--neutral-white);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0 top 0, right 0 bottom 0;
+}
+main {
+  padding: var(--main-padding);
+}
+b {
+  font-weight: var(--bold);
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1;
+  margin-top: 1.5em;
+  color: var(--primary-very-dark-magenta);
+}
+
+.title-description {
+  margin: 1.5em 0 2em 0;
+  font-size: .95rem;
+  font-weight: var(--regular2);
+  text-align: center;
+  line-height: 1.5;
+  color: var(--neutral-dark-grayish-magenta);
+}
+
+.star-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.star-review {
+  background: var(--neutral-light-grayish-magenta);
+  width: 100%;
+  border-radius: .5em;
+  padding: 1em;
+  margin: .5em 0;
+}
+
+.star-review > p {
+  text-align: center;
+  color: var(--primary-very-dark-magenta);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.star {
+  margin: 0 .3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial {
+  padding: 2em;
+  background: var(--primary-very-dark-magenta);
+  border-radius: .5em;
+  margin-bottom: 1em;
+}
+
+.buyer-info {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.buyer-name > p {
+  margin-bottom: .2em;
+}
+
+.buyer-name > span {
+  color: var(--primary-soft-pink);
+  font-weight: var(--regular1);
+}
+
+.buyer-img {
+  width: 3em;
+  margin-right: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buyer-img img {
+  border-radius: 50%;
+}
+
+.testimonial > p {
+  color: var(--neutral-white);
+  padding: 1em 0;
+  line-height: 1.7;
+  font-size: .85rem;
+}
+.testimonials {
+  margin-bottom: 3em;
+}
+@media only screen and (min-width: 950px) {
+  body {
+  background:  url("./images/bg-pattern-top-desktop.svg")
+  , url("./images/bg-pattern-bottom-desktop.svg")
+  ,var(--neutral-white);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0 top 0, right 0 bottom 0;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 8em 0;
+  }
+  header {
+    flex: 0 0 45%;
+  }
+  .title {
+    font-size: 4rem;
+    margin-top: initial;
+  }
+  .title, .title-description {
+    text-align: left;
+  }
+
+  .star-reviews {
+    flex: 0 0 55%;
+    align-items: flex-end;
+    margin: initial;
+  }
+  .star-review {
+    display: flex;
+    align-items: center;
+    max-width: 28em;
+  }
+  .star-review:nth-of-type(1) {
+    margin-right: 6em;
+  }
+  .star-review:nth-of-type(2) {
+    margin-right: 3em;
+  }
+  
+  .star-review > p {
+    width: 100%;
+    text-align: left;
+  }
+  .stars {
+    margin: 0 2em 0 1em;
+    flex: 0 0 auto;
+  }
+  .testimonials {
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
+    margin-top: 2em;
+    margin-bottom: initial;
+  }
+  .testimonial {
+    margin-bottom: initial;
+  }
+  .testimonial:nth-of-type(2) {
+    margin-top: 1em;
+  }
+  .testimonial:nth-of-type(3) {
+    margin-top: 2em;
+  }
+}
